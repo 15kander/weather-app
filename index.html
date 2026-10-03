@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Программа погоды</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="box">
+        <h2>Точная Погода 🌤</h2>
+        
+        <input type="text" id="cityInput" placeholder="Введите город...">
+        <button onclick="getWeather()">Искать</button>
+
+        <div class="history" id="historyDiv">
+        </div>
+
+        <h1 id="loading" style="display: none; color: #ff7e5f;">Загрузка данных...</h1>
+
+        <div id="weatherBlock" style="display: none;">
+            <h2 id="cityName" style="margin-bottom: 5px;">—</h2>
+            
+            <div style="font-size: 55px; font-weight: bold; margin: 10px 0;" id="temp">+0°C</div>
+            <p id="feelsLike" style="color: #666; margin-top: -10px;">Ощущается как: +0°C</p>
+            <p id="desc" style="font-size: 18px; font-weight: bold;">Ясно</p>
+
+            <div class="details-grid">
+                <div>💧 Влажность: <b id="humidity">0%</b></div>
+                <div>💨 Ветер: <b id="wind">0 км/ч</b></div>
+                <div>🧭 Направление: <b id="windDir">С</b></div>
+                <div>⏲️ Давление: <b id="pressure">0 мм</b></div>
+            </div>
+
+            <h3 style="margin-top: 20px;">Прогноз на 5 дней:</h3>
+            <div class="days-container" id="forecast">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
